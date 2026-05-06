@@ -1,0 +1,211 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* BODY */
+body {
+  background: #0a0a0a;
+  color: white;
+}
+
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#000, #0a0a0a);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.typing {
+  color: #a855f7;
+  margin: 10px 0;
+}
+
+
+.sobre p {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+  
+}
+
+.sobre h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a855f7;
+}
+
+/* ===== CONTAINER DOS ÍCONES ===== */
+/* ===== CONTAINER ===== */
+.skills-icons {
+  display: flex; /* Alinha lado a lado */
+  flex-wrap: wrap; /* Responsivo */
+  justify-content: center; /* Centraliza */
+  gap: 20px; /* Espaçamento */
+  margin-top: 30px; /* Espaço acima */
+}
+
+/* ===== DEVICON ===== */
+.skills-icons i {
+  font-size: 40px; /* Tamanho */
+  color: #a855f7; /* Roxo padrão */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ===== SVG (CANVA + COREL) ===== */
+.skills-icons img {
+  width: 40px;
+  height: 40px;
+
+  /* 🔥 CONVERTE QUALQUER COR PARA ROXO */
+  filter: invert(44%) sepia(93%) saturate(747%) hue-rotate(245deg) brightness(101%) contrast(101%);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ===== HOVER ===== */
+.skills-icons i:hover,
+.skills-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3) invert(44%) sepia(93%) saturate(747%) hue-rotate(245deg);
+}
+
+
+
+/* SEÇÕES */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* PROJETOS */
+
+.projetos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #a855f7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card-img:hover .overlay {
+  opacity: 1;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* ===== SEÇÃO CONTATO ===== */
+.contato {
+  text-align: center; /* Centraliza */
+  padding: 80px 20px; /* Espaçamento */
+}
+
+/* ===== TÍTULO ===== */
+.contato h2 {
+  color: #a855f7; /* Roxo */
+  font-size: 36px; /* Tamanho */
+  margin-bottom: 35px; /* Espaço abaixo */
+}
+
+/* ===== CONTAINER DOS ÍCONES ===== */
+.contato-icons {
+  display: flex; /* Lado a lado */
+  justify-content: center; /* Centraliza */
+  align-items: center;
+  gap: 25px; /* Espaçamento */
+  flex-wrap: wrap; /* Responsivo */
+}
+
+/* ===== LINKS ===== */
+.contato-icons a {
+  width: 65px; /* Largura */
+  height: 65px; /* Altura */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%; /* Deixa circular */
+
+  background: rgba(255, 255, 255, 0.05); /* Fundo glass */
+
+  border: 1px solid rgba(168, 85, 247, 0.3);
+
+  color: #ffffff; /* Cor ícone */
+
+  font-size: 26px;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.4s ease;
+}
+
+/* ===== HOVER ===== */
+.contato-icons a:hover {
+  transform: translateY(-5px) scale(1.08);
+
+  background: #a855f7;
+
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  color: #a855f7;
+}
